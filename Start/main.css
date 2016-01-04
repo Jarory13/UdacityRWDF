@@ -24,6 +24,9 @@ ul {
   padding: 0;
   margin: 0;
 }
+a {
+  padding: 1.5em;
+}
 
 @media (max-width: 1000px) {
   body { font-size: 1.3em; }
@@ -31,6 +34,8 @@ ul {
 @media (max-width: 500px) {
   body { font-size: 1.1; }
 }
+
+
 
 
 /*
@@ -179,7 +184,7 @@ main {
   float: right;
   width: 100%;
   height: 300px;
-  border-bottom: 1px solid #E0E0E0;
+  
   padding: 2em;
 }
 
@@ -207,11 +212,16 @@ main {
 .top-news__item a {
   text-decoration: none;
   color: #666;
+  padding: inherit;
 }
 
 .top-news__item a:hover,
 .top-news__item a:active {
   text-decoration: underline;
+}
+
+.top-news_list {
+  border-bottom: 1px solid #E0E0E0;
 }
 
 
@@ -351,6 +361,7 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
+  padding: inherit;
 }
 
 .snippet__title a:hover,
@@ -379,4 +390,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: inherit;
 }
