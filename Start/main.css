@@ -28,10 +28,10 @@ a {
   padding: 1.5em;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   body { font-size: 1.3em; }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   body { font-size: 1.1; }
 }
 
