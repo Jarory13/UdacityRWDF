@@ -7,7 +7,7 @@ body, html {
 
 body {
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 1em;
   color: #424242;
 }
 
@@ -24,18 +24,6 @@ ul {
   padding: 0;
   margin: 0;
 }
-a {
-  padding: 1.5em;
-}
-
-@media screen and (max-width: 1000px) {
-  body { font-size: 1.3em; }
-}
-@media screen and (max-width: 500px) {
-  body { font-size: 1.1; }
-}
-
-
 
 
 /*
@@ -62,6 +50,7 @@ a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   min-height: 56px;
   transition: min-height 0.3s;
+  width: 100%;
 }
 
 .header__inner {
@@ -102,7 +91,6 @@ a {
   width: 100%;
   padding: 0;
   margin: 0;
-
 }
 
 .nav__item {
@@ -118,6 +106,7 @@ a {
 .nav a {
   text-decoration: none;
   color: #616161;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -153,7 +142,6 @@ main {
  */
 
 .hero {
-  float: left;
   width: 100%;
   position: relative;
   background-image: url("./images/dog.jpg");
@@ -181,11 +169,10 @@ main {
  */
 
 .top-news {
-  float: right;
+  max-height: 300px;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em;
   width: 100%;
-  height: 300px;
-  
-  padding: 2em;
 }
 
 .news__title {
@@ -197,7 +184,7 @@ main {
 
 .top-news__item {
   border-bottom: 1px solid #E0E0E0;
-  padding: 1em;
+  padding: 1em 0;
   line-height: 19.2px;
 }
 
@@ -212,16 +199,12 @@ main {
 .top-news__item a {
   text-decoration: none;
   color: #666;
-  padding: inherit;
+  padding: 1.5em inherit;
 }
 
 .top-news__item a:hover,
 .top-news__item a:active {
   text-decoration: underline;
-}
-
-.top-news_list {
-  border-bottom: 1px solid #E0E0E0;
 }
 
 
@@ -232,16 +215,13 @@ main {
  */
 
 .scores {
-  width: 100%;
-  float: left;
   padding-top: 1em;
-  margin-top: 24px;
+  flex-grow: 1;
 }
 
 .scores__table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 5em;
 }
 
 .scores__table th,
@@ -283,8 +263,7 @@ main {
  */
 
 .weather {
-  float: right;
-  width: 100%;
+  flex-grow: 1;
   padding: 1em;
 }
 
@@ -334,11 +313,12 @@ main {
 
 /*
  *
- * Weather
+ * Recent News
  *
  */
 
 .recent-news {
+  flex-grow: 1;
   clear: both;
   padding: 1em;
 }
@@ -361,7 +341,7 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
-  padding: inherit;
+  padding: 1.5em inherit;
 }
 
 .snippet__title a:hover,
@@ -390,5 +370,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
-  padding: inherit;
+  padding: 1.5em;
 }

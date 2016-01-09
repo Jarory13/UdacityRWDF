@@ -1,0 +1,188 @@
+.content, .header__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+.header__logo, .header__title, .header__menu {
+	order: 10; 
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 20;
+}
+
+.header{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header__menu {
+	width: 34px;
+	height: 34px;	
+	display: inline-block;
+    position: static;
+    right: 0;
+    padding: 1em;
+    display: none;
+}
+
+@media screen and (min-width: 400px) {
+	.nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header {
+  	width: 100%;
+  }
+  .header__inner {
+  	width: 100%;
+  }
+
+  .header__logo {
+  	order: 12;
+  }
+
+  	.header__title {
+	order: 10; 
+	margin: 8px;
+	}
+
+ .header__menu {
+		display: block;
+		order: 11;
+		padding: 2em;
+		width: 50%;
+	}
+
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 650px) {
+	.nav {
+		-webkit-transform: translate(0px, 0);
+    transform: translate(0px, 0);
+    width: 100%;
+
+	}
+
+	.nav__item {
+		box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+	}
+
+	.header__menu {
+		order: 10; 
+		display: none;
+	}
+
+	.header__logo {
+		order: 10; 
+		margin-right: 8px;
+	}
+
+	.header__title {
+	order: 10; 
+	margin: 8px
+}
+
+}
+
+@media screen and (min-width: 700px) {
+	.hero {
+		width: 60%;
+		order: 11;
+	}
+
+	.weather {
+		order: 12;
+		width: 40%
+	}
+
+
+.header__logo {
+  height: 72px;
+  margin-right: 1em;
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 4em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: #212121;
+}
+
+
+}
+
+@media screen and (min-width: 850px) {
+	.top-news  {
+		width: 60%;
+	}
+	.scores {
+		width: 40%;
+	}
+
+}
+
+@media screen and (min-width: 950px) {
+	body {
+		width: 950px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.nav {
+		width: 950px;
+	}
+
+	.hero {
+		height: 350px;
+	}
+
+	.scores {
+		order: 14;
+		width: 40%;
+	}
+
+	.top-news {
+		order: 13;
+		width: 60%;
+	}
+
+	
+
+	.weather {
+		order: 12;
+		width: 40%
+	}
+}
